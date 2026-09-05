@@ -1,0 +1,144 @@
+/* =====================================================
+   FASTBITE - RESPONSIVE STYLES
+   ===================================================== */
+
+
+/* ==================== TABLET ==================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .main-nav {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px 20px 20px;
+
+        background: var(--white);
+
+        border-bottom: 1px solid var(--gray-200);
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 13px 10px;
+
+        border-bottom: 1px solid var(--gray-100);
+    }
+
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav a.active::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .foundation-section {
+        min-height: 550px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(
+            100% - 28px,
+            var(--container-width)
+        );
+    }
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo-icon {
+        font-size: 25px;
+    }
+
+    .main-nav {
+        top: 64px;
+    }
+
+    .foundation-section {
+        min-height: 500px;
+    }
+
+    .foundation-content {
+        padding: 60px 0;
+    }
+
+    .foundation-content h1 {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
+
+    .foundation-content p {
+        font-size: 16px;
+    }
+
+    .foundation-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 50px 0;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}

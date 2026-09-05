@@ -1,0 +1,497 @@
+/* =====================================================
+   FASTBITE - GLOBAL STYLES
+   ===================================================== */
+
+
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ==================== VARIABLES ==================== */
+
+:root {
+
+    --primary: #ff4d2e;
+    --primary-dark: #e63b20;
+
+    --secondary: #ffc107;
+
+    --dark: #171717;
+    --dark-light: #292929;
+
+    --white: #ffffff;
+
+    --gray-100: #f7f7f7;
+    --gray-200: #eeeeee;
+    --gray-300: #dddddd;
+    --gray-500: #777777;
+    --gray-600: #555555;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+
+    --container-width: 1200px;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 18px;
+    --radius-xl: 30px;
+
+    --shadow-sm:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+    --shadow-md:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+
+    --transition:
+        0.3s ease;
+}
+
+
+/* ==================== CONTAINER ==================== */
+
+.container {
+    width: min(
+        100% - 40px,
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ==================== HEADER ==================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid var(--gray-200);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ==================== NAVBAR ==================== */
+
+.navbar {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* ==================== LOGO ==================== */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    color: var(--dark);
+}
+
+.logo > span:last-child > span {
+    color: var(--primary);
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.main-nav a {
+    position: relative;
+
+    padding: 8px 0;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--gray-600);
+
+    transition: color var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary);
+}
+
+.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--primary);
+
+    border-radius: 10px;
+}
+
+
+/* ==================== NAV ACTIONS ==================== */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* ==================== CART ==================== */
+
+.cart-btn {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--gray-100);
+
+    border-radius: 50%;
+
+    font-size: 19px;
+
+    transition: all var(--transition);
+}
+
+.cart-btn:hover {
+    background: #fff0ed;
+    transform: translateY(-2px);
+}
+
+.cart-count {
+    position: absolute;
+
+    top: -4px;
+    right: -4px;
+
+    min-width: 19px;
+    height: 19px;
+
+    padding: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border: 2px solid var(--white);
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ==================== LOGIN ==================== */
+
+.login-btn {
+    padding: 10px 20px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: var(--radius-md);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: all var(--transition);
+}
+
+.login-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* ==================== MOBILE MENU BUTTON ==================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--gray-100);
+
+    border-radius: var(--radius-md);
+
+    font-size: 22px;
+}
+
+
+/* ==================== FOUNDATION SECTION ==================== */
+
+.foundation-section {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f4 0%,
+            #ffffff 55%,
+            #fff8e5 100%
+        );
+}
+
+.foundation-content {
+    max-width: 700px;
+
+    padding: 80px 0;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 14px;
+
+    margin-bottom: 20px;
+
+    background: #fff0ed;
+    color: var(--primary);
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.foundation-content h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.foundation-content p {
+    max-width: 600px;
+
+    margin-bottom: 30px;
+
+    color: var(--gray-600);
+
+    font-size: 18px;
+}
+
+
+/* ==================== BUTTONS ==================== */
+
+.foundation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: var(--radius-md);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: all var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--dark);
+
+    border: 1px solid var(--gray-300);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* ==================== FOOTER ==================== */
+
+.site-footer {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1.5fr;
+
+    gap: 60px;
+
+    padding: 70px 0;
+}
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-logo {
+    color: var(--white);
+
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    color: #aaaaaa;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 8px;
+
+    font-size: 17px;
+}
+
+.footer-links a,
+.footer-contact p {
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    padding: 20px;
+
+    border-top: 1px solid #333333;
+
+    text-align: center;
+
+    color: #888888;
+
+    font-size: 13px;
+}
+
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
